@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Class-4",
-    "slug": "Class-4",
+    "name": "react-navigation-class-4",
+    "slug": "react-navigation-class-4",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
