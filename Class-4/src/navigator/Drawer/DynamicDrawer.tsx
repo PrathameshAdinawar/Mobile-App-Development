@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import { useNavigation, NavigationContainer, createStaticNavigation } from '@react-navigation/native';
+import { useNavigation, NavigationContainer } from '@react-navigation/native';
 import { Button } from '@react-navigation/elements';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -28,17 +28,21 @@ function ProfileScreen() {
   );
 }
 
-const MyDrawer = createDrawerNavigator({
-    screens: {
-        Home: HomeScreen,
-        Profile: ProfileScreen
-    }
-});
+const Drawer = createDrawerNavigator();
 
-const Navigation = createStaticNavigation(MyDrawer);
-
-export default function StaticDrawer() {
+function MyDrawer() {
   return (
-    <Navigation/>
+    <Drawer.Navigator>
+      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Profile" component={ProfileScreen} />
+    </Drawer.Navigator>
+  );
+}
+
+export default function DynamicDrawer() {
+  return (
+    <NavigationContainer>
+      <MyDrawer />
+    </NavigationContainer>
   );
 }

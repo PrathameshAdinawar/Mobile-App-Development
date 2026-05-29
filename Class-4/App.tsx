@@ -21,6 +21,8 @@ import DynamicTabNavigator from './src/navigator/Tabs/DynamicTabNavigator2';
 import DynamicTabNavigator2 from './src/navigator/Tabs/DynamicTabNavigator2';
 import DynamicTabNavigator3 from './src/navigator/Tabs/DynamictabNavigator3';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import StaticDrawer from './src/navigator/Drawer/StaticDrawer';
+import DynamicDrawer from './src/navigator/Drawer/DynamicDrawer';
 
 function HomeScreen() {
   const navigation = useNavigation();
@@ -28,9 +30,9 @@ function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
-      <Button onPress={() => navigation.navigate('Profile')}>
-        Go to Profile
-      </Button>
+      {/* <Button onPress={() => navigation.navigate('Profile')}> */}
+        {/* Go to Profile
+      </Button> */}
     </View>
   );
 }
@@ -41,7 +43,7 @@ function ProfileScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Profile Screen</Text>
-      <Button onPress={() => navigation.navigate('Home')}>Go to Home</Button>
+      {/* <Button onPress={() => navigation.navigate('')}>Go to Home</Button> */}
     </View>
   );
 }
@@ -58,7 +60,7 @@ const Navigation = createStaticNavigation(MyTabs);
 export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <DynamicTabNavigator3 />
+      <DynamicDrawer />
     </SafeAreaView>
   );
 }
