@@ -11,7 +11,7 @@ const HomeScreen = () => {
   return (
     <View>
       <Text>HomeScreen</Text>
-      <Button onPress={()=>navigation.navigate("Details",{username:"chaicode"})}>Go to Profiles</Button>
+      <Button onPress={()=>navigation.navigate("Details",{username:"chaicode"})}>Go to Details</Button>
     </View>
   )
 }
